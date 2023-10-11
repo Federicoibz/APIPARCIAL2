@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "persona",
+			"name": "Persona",
 			"item": [
 				{
 					"name": "Get all",
@@ -15,12 +15,11 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/personas",
+							"raw": "http://localhost9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"localhost9000"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
@@ -34,21 +33,7 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/personas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"personas",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
@@ -56,24 +41,23 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "\r\n{\r\n    \"nombre\":\"Armando\",\r\n    \"apellido\":\"Paredez\",\r\n    \"dni\":\"456987123\",\r\n    \"domicilio\":{\r\n        \"calle\": \"catamarca\",\r\n        \"numero\": 256,\r\n        \"localidad\":{\r\n            \"id\": 1,\r\n            \"denominancion\": \"Godoy Cruz\"\r\n        }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Los dias del venado\",\r\n            \"fecha\":2012,\r\n            \"genero\": \"fantastico\",\r\n            \"paginas\": 125,\r\n            \"autores\": [\r\n                {\r\n                    \"id\":1,\r\n                    \"nombre\":\"Armando\",\r\n                    \"apellido\":\"Paredez\",\r\n                    \"biografia\":\"odfjvnioejioejgiecoiejfguiehnoiekmcioewrhguieiocjmeriovc\"\r\n\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+							"raw": "{\r\n    \"nombre\" : \"franco\"\r\n    \"apellido\" : \"Gimenez\"\r\n    \"dni\" : 123153\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/api/v1/personas",
+							"raw": "http://Localhost:9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"Localhost"
 							],
-							"port": "8080",
+							"port": "9000",
 							"path": [
 								"api",
 								"v1",
@@ -87,60 +71,22 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Armando\",\r\n    \"apellido\": \"Paredez\",\r\n    \"dni\": 456985523,\r\n    \"domicilio\": null,\r\n    \"libros\": []\r\n}"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/personas/4",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"personas",
-								"4"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/personas/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"personas",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Autores",
+			"name": "Autor",
 			"item": [
 				{
 					"name": "Get all",
@@ -148,16 +94,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/autores",
+							"raw": "http://localhost9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"localhost9000"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"autores"
+								"personas"
 							]
 						}
 					},
@@ -167,21 +112,7 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"autores",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
@@ -189,30 +120,7 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"nombre\":\"Pablo\",\r\n    \"apellido\":\"Alvarez\",\r\n    \"biografia\":\"nvgejibfgiowejicfnegifhjmewiucfhoiehfxiuwhfimxehmgunicwhmifueghaxwigfisdfsdvbhfvkjsdhbgfuihsnvocuifsdgbhyfudhisjcnhyytghyvftfvtywsxdcdgbywdcqebyhuedcfvbyhuerfv2yubh\"\r\n}\r\n\r\n"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/autores",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"autores"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
@@ -220,60 +128,22 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Armando\",\r\n    \"apellido\": \"Paredez\",\r\n    \"dni\": 456985523,\r\n    \"domicilio\": null,\r\n    \"libros\": []\r\n}"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"autores",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/autores/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"autores",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				}
 			]
 		},
 		{
-			"name": "Localidades",
+			"name": "Libro",
 			"item": [
 				{
 					"name": "Get all",
@@ -281,16 +151,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades",
+							"raw": "http://localhost9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"localhost9000"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"localidades"
+								"personas"
 							]
 						}
 					},
@@ -300,21 +169,7 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"localidades",
-								"1"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
@@ -322,30 +177,7 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \"denominacion\":\"Guaymallén\" \r\n}\r\n"
-						},
-						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"api",
-								"v1",
-								"localidades"
-							]
-						}
+						"header": []
 					},
 					"response": []
 				},
@@ -353,53 +185,129 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"id\": 4,\r\n    \"nombre\": \"Armando\",\r\n    \"apellido\": \"Paredez\",\r\n    \"dni\": 456985523,\r\n    \"domicilio\": null,\r\n    \"libros\": []\r\n}"
-						},
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidad",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/personas/4",
+							"raw": "http://localhost9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"localhost9000"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"personas",
-								"4"
+								"personas"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Delete",
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
 					"request": {
 						"method": "DELETE",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domicilio",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/api/v1/localidades/1",
+							"raw": "http://localhost9000/api/v1/personas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"localhost9000"
 							],
-							"port": "8080",
 							"path": [
 								"api",
 								"v1",
-								"localidades",
-								"1"
+								"personas"
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": []
 					},
 					"response": []
 				}
