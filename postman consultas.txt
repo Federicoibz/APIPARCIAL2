@@ -1,0 +1,34 @@
+para ingresar en postman las consultas:
+http://Localhost:9000/api/v1/personas
+http://Localhost:9000/api/v1/domicilios
+http://Localhost:9000/api/v1/autores
+http://Localhost:9000/api/v1/localidades
+{
+    "nombre" : "federico",
+    "apellido" : "Ibanez",
+    "dni" : 1234567889,
+    "domicilio" : {
+	"calle" : "los sauces"
+	"numero" : 1122,
+	"localidad": {
+	"id": 1,
+	"denominacion": "san rafael" }
+
+
+},
+  "Libros": [
+	{
+    "fecha": 0001,
+    "genero" : "religion",
+    "paginas" : 5000,
+    "titulo" : "biblia"
+	"autores":[
+	"id": 2,
+    "nombre" : "jose",
+    "apellido" : "lopez",
+    "biografia" : "un capo "
+]
+}
+]
+
+}
