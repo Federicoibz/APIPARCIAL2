@@ -9,7 +9,7 @@ http://Localhost:9000/api/v1/localidades
     "apellido" : "Ibanez",
     "dni" : 1234567889,
     "domicilio" : {
-	"calle" : "los sauces"
+	"calle" : "los sauces",
 	"numero" : 1122,
 	"localidad": {
 	"id": 1,
@@ -23,13 +23,12 @@ http://Localhost:9000/api/v1/localidades
     "genero" : "religion",
     "paginas" : 5000,
     "titulo" : "biblia"
-	"autores":[
+	"autores":{
 	"id": 2,
     "nombre" : "jose",
     "apellido" : "lopez",
     "biografia" : "un capo "
-]
+}
 }
 ]
-
 }
