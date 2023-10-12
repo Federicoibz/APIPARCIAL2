@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "bbea1f4d-52f5-4983-83a4-e3ae3658f8d5",
+		"_postman_id": "921ae8a5-4f23-414b-8556-a16e62b6c1af",
 		"name": "Apis",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30290798"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "29849444"
 	},
 	"item": [
 		{
@@ -14,18 +14,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost9000/api/v1/personas",
-							"protocol": "http",
-							"host": [
-								"localhost9000"
-							],
-							"path": [
-								"api",
-								"v1",
-								"personas"
-							]
-						}
+						"url": "http://localhost9000/api/v1/personas"
 					},
 					"response": []
 				},
@@ -33,7 +22,8 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -41,10 +31,16 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nombre\" : \"franco\"\r\n    \"apellido\" : \"Gimenez\"\r\n    \"dni\" : 123153\r\n}\r\n",
+							"raw": "{\r\n    \"nombre\" : \"franco\",\r\n    \"apellido\" : \"Gimenez\",\r\n    \"dni\" : 12344153\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -52,7 +48,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://Localhost:9000/api/v1/personas",
+							"raw": "http://Localhost:9000/api/v1/personas?=",
 							"protocol": "http",
 							"host": [
 								"Localhost"
@@ -62,6 +58,12 @@
 								"api",
 								"v1",
 								"personas"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
 							]
 						}
 					},
@@ -71,7 +73,14 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": ""
 					},
 					"response": []
 				},
@@ -79,7 +88,84 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/personas/paged?page=0&size=5&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9000/api/v1/personas/searchPaged?filtro=o&page=0&size=5&sort=id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "o"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id"
+								}
+							]
+						}
 					},
 					"response": []
 				}
@@ -93,18 +179,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost9000/api/v1/personas",
-							"protocol": "http",
-							"host": [
-								"localhost9000"
-							],
-							"path": [
-								"api",
-								"v1",
-								"personas"
-							]
-						}
+						"url": "http://localhost9000/api/v1/personas"
 					},
 					"response": []
 				},
@@ -112,7 +187,8 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -120,7 +196,8 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -128,7 +205,8 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -136,7 +214,8 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				}
@@ -150,18 +229,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost9000/api/v1/personas",
-							"protocol": "http",
-							"host": [
-								"localhost9000"
-							],
-							"path": [
-								"api",
-								"v1",
-								"personas"
-							]
-						}
+						"url": "http://localhost9000/api/v1/personas"
 					},
 					"response": []
 				},
@@ -169,7 +237,8 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -177,7 +246,8 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -185,7 +255,8 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -193,7 +264,8 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				}
@@ -207,18 +279,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost9000/api/v1/personas",
-							"protocol": "http",
-							"host": [
-								"localhost9000"
-							],
-							"path": [
-								"api",
-								"v1",
-								"personas"
-							]
-						}
+						"url": "http://localhost9000/api/v1/personas"
 					},
 					"response": []
 				},
@@ -226,7 +287,8 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -234,7 +296,8 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -242,7 +305,8 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -250,7 +314,8 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				}
@@ -264,18 +329,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost9000/api/v1/personas",
-							"protocol": "http",
-							"host": [
-								"localhost9000"
-							],
-							"path": [
-								"api",
-								"v1",
-								"personas"
-							]
-						}
+						"url": "http://localhost9000/api/v1/personas"
 					},
 					"response": []
 				},
@@ -283,7 +337,8 @@
 					"name": "Get one",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -291,7 +346,8 @@
 					"name": "Create",
 					"request": {
 						"method": "POST",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -299,7 +355,8 @@
 					"name": "Update",
 					"request": {
 						"method": "PUT",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				},
@@ -307,7 +364,8 @@
 					"name": "delete",
 					"request": {
 						"method": "DELETE",
-						"header": []
+						"header": [],
+						"url": ""
 					},
 					"response": []
 				}

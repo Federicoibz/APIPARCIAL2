@@ -26,15 +26,15 @@ public interface PersonaRepository extends BaseRepository<Persona, Long> {
     Page<Persona> search(String filtro, Pageable pageable);
 
     //ANOTACION JPQL USANDO PARAMETROS NOMBRADOS
-   // @Query(value = "SELECT p FROM Persona p WHERE p.nombre LIKE '%:filtro%' OR p.apellido LIKE '%:filtro%'")
-    //List<Persona> search2(@Param("filtro")String filtro);
+    @Query(value = "SELECT p FROM Persona p WHERE p.nombre LIKE '%:filtro%' OR p.apellido LIKE '%:filtro%'")
+    List<Persona> search2(@Param("filtro")String filtro);
 
     //NATIVE QUERY
-    @Query(
-            value = "SELECT * FROM persona WHERE persona.nombre LIKE '%:filtro%' OR persona.apellido LIKE '%:filtro%'",
-            nativeQuery = true
-    )
-    List<Persona> search3(String filtro);
+   // @Query(
+//value = "SELECT * FROM persona WHERE persona.nombre LIKE '%:filtro%' OR persona.apellido LIKE '%:filtro%'",
+  //          nativeQuery = true
+  //  )
+    //List<Persona> search3(String filtro);
 
     @Query(
             value = "SELECT * FROM persona WHERE persona.nombre LIKE '%:filtro%' OR persona.apellido LIKE '%:filtro%'",
